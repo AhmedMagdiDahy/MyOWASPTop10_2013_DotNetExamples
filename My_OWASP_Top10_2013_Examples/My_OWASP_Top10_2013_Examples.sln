@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.21005.1
+# Visual Studio 14
+VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "VulnerableWebSite", "http://localhost:54286", "{9FBA7DA1-928C-411C-B07A-D7A416AD1E36}"
 	ProjectSection(WebsiteProperties) = preProject
@@ -72,6 +72,8 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "ExampleCalendarControlHacke
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibrary_Helper_VulnerableWeSite", "ClassLibrary_Helper_VulnerableWeSite\ClassLibrary_Helper_VulnerableWeSite.csproj", "{A7F5037E-1FEB-49C5-9A2E-66560F3CBA78}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OWASP_A0_ValidationExamples", "OWASP_A0_ValidationExamples\OWASP_A0_ValidationExamples.csproj", "{6A70AADD-4F8C-408B-816A-8541D539BCE7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -94,6 +96,10 @@ Global
 		{A7F5037E-1FEB-49C5-9A2E-66560F3CBA78}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A7F5037E-1FEB-49C5-9A2E-66560F3CBA78}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A7F5037E-1FEB-49C5-9A2E-66560F3CBA78}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A70AADD-4F8C-408B-816A-8541D539BCE7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A70AADD-4F8C-408B-816A-8541D539BCE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A70AADD-4F8C-408B-816A-8541D539BCE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A70AADD-4F8C-408B-816A-8541D539BCE7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
