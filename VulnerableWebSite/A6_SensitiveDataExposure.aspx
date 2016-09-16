@@ -20,10 +20,18 @@
             See some .net crypto. function <br />
             hash password without salt<br />
             hash password with salt<br />
-
-            Show how Membership works and stores password <br />
-            <br /><br />
-            HTTPs ? SHTTPs
+                                               
         </div>
+        <div>
+            <h1>Criar um novo Utilizador:</h1>
+              <span class="text-primary">Username</span>:<asp:TextBox ID="TextBox1_UserName" runat="server"></asp:TextBox>
+                <br />
+                <span class="text-primary">Password</span>:<asp:TextBox ID="TextBox2_Password" runat="server"></asp:TextBox>
+
+                <br />
+                <asp:Button ID="Button_CreateUser" runat="server"  Text="Criar" CssClass="btn-primary" OnClick="Button_CreateUser_Click" /><asp:Button ID="Button1_CreateUSerSafe0" runat="server"  Text="Criar safe 0" CssClass="btn-primary" OnClick="Button1_CreateUSerSafe0_Click" />
+                <asp:Label ID="Label1" runat="server" Text="" ForeColor="Red"></asp:Label>
+        </div>
+
     </form>
 </asp:Content>
