@@ -26,7 +26,7 @@
             <div>Este risco/vulnerabilidade pode requerer eng. social. O ataquante aproveita uma falha no site por exemplo XSS para roubar o ID da sessão ou utiliza o referer no caso de ser uma sessão sem cookies...</div>
 
 
-            <div>SESSÕES SEM COOKIES...</div>
+            <div>SESSÕES SEM COOKIES...(set in web.config)</div>
 
         </div>
 
