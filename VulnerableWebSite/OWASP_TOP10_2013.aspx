@@ -8,8 +8,7 @@
     <form id="form1" runat="server">
         
         <div class="text-center">
-            <div style="margin-top:2%">
-                <img src="Images/main_logo_OWASP.jpg" /></div>
+          
             <div class="h1">TOP 10 - 2013</div>
             <div class="h3"><a href="A1_Injection.aspx">A1 - Injection</a></div>
             <div class="h3"><a href="A2_BrokenAuth_SessionMgnt.aspx">A2 - Broken Authentication and Session Management</a></div>

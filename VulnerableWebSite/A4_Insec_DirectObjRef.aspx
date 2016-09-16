@@ -7,7 +7,6 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
     <form id="form1" runat="server" class="text-center">
         <div class="h1">
-            OWASP
             <br />
             A4 2013 - Insecure Direct Object Reference
         </div>

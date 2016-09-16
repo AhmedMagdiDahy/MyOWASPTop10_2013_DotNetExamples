@@ -10,12 +10,13 @@
     </asp:ContentPlaceHolder>
 </head>
 <body>
-    <%--<form id="form1" runat="server">--%>
+     <div style="margin-top:2%" class="text-center">
+                <img src="Images/main_logo_OWASP.jpg" /></div>
     <div>
         <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
         
         </asp:ContentPlaceHolder>
     </div>
-   <%-- </form>--%>
+  
 </body>
 </html>

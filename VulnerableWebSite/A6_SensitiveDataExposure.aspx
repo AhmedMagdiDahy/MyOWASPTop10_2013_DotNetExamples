@@ -8,8 +8,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
     <form id="form1" runat="server" class="text-center">
         <div class="h1">
-            OWASP
-            <br />
+            &nbsp;<br />
             A6 2013 - Sensitive Data Exposure
             <br />
             <h4>2010 - Insecure Cryptographic Storage </h4>
