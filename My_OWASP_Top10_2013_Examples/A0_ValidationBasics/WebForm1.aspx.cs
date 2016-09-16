@@ -11,6 +11,7 @@ namespace A0_ValidationBasics
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            //
 
         }
     }
