@@ -33,7 +33,7 @@ public partial class A3_XSS : System.Web.UI.Page
 
         //validar do lado do servidor sempre!!!
         //if (Page.IsValid)
-            insertPosts(TextBox1_NewPost.Text);
+            insertPost(TextBox1_NewPost.Text);
         
     }
 
@@ -76,11 +76,9 @@ public partial class A3_XSS : System.Web.UI.Page
 
     }
 
-    private void insertPosts(string newPost)
+    private void insertPost(string newPost)
     {
-       
-
-
+      
         String connStr1 = ConfigurationManager.ConnectionStrings["OWASP_Top10_2013_DB_ConnectionString"].ToString();
 
         SqlConnection sqlConn1 = new SqlConnection(connStr1);
@@ -99,8 +97,6 @@ public partial class A3_XSS : System.Web.UI.Page
 
         sqlConn1.Open();
 
-
-
         sqlCmd1.ExecuteNonQuery();
 
         
@@ -111,7 +107,6 @@ public partial class A3_XSS : System.Web.UI.Page
     }
     protected void Button1_CleanPost_Click(object sender, EventArgs e)
     {
-
 
         String connStr1 = ConfigurationManager.ConnectionStrings["OWASP_Top10_2013_DB_ConnectionString"].ToString();
 
@@ -124,15 +119,11 @@ public partial class A3_XSS : System.Web.UI.Page
         String cmdStr = "delete from forum ";
 
         SqlCommand sqlCmd1 = new SqlCommand(cmdStr, sqlConn1);
-
        
 
         sqlConn1.Open();
 
-
-
         sqlCmd1.ExecuteNonQuery();
-
 
         sqlConn1.Close();
 

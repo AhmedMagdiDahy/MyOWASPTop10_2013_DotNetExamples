@@ -24,7 +24,7 @@
         </div>
         <div class="text-right" style="margin-right:10%; margin-top:-2%">
 
-            <img src="Images/logo_2011050705.png" />
+           
         </div>
     </form>
 </asp:Content>
