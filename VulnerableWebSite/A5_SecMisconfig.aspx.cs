@@ -20,8 +20,8 @@ public partial class A5_SecMisconfig : System.Web.UI.Page
     {
         int id = int.Parse(Request.QueryString["id"]);
                 //check admin rights
-        if (id == 123431212)
-        { }
+        //if (id == 123431212)
+        //{ }
     }
 
     private void VerySimpleBadDataAcess()
@@ -33,7 +33,6 @@ public partial class A5_SecMisconfig : System.Web.UI.Page
         //só utilizo a pass como meio de autenticação para 
         //tornar simples a leitura da query
 
-
         String cmdStr = "select top(1)* from Lixo";
 
         SqlCommand sqlCmd1 = new SqlCommand(cmdStr, sqlConn1);
@@ -41,10 +40,8 @@ public partial class A5_SecMisconfig : System.Web.UI.Page
         sqlConn1.Open();
         SqlDataReader dr = sqlCmd1.ExecuteReader();
 
-
-
+        //verificar se há dados antes de aceder ao reader
         Label1.Text = "o top1" + dr["dados"].ToString();
-
 
         dr.Close();
         sqlConn1.Close();
