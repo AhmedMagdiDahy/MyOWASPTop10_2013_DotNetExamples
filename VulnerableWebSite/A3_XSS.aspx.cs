@@ -41,7 +41,6 @@ public partial class A3_XSS : System.Web.UI.Page
     {
         string posts = "";
 
-
         String connStr1 = ConfigurationManager.ConnectionStrings["OWASP_Top10_2013_DB_ConnectionString"].ToString();
 
         SqlConnection sqlConn1 = new SqlConnection(connStr1);
@@ -61,19 +60,19 @@ public partial class A3_XSS : System.Web.UI.Page
         {
             while (dr.Read())
             {
-                posts += "<div>" + dr[0].ToString() + "</div></hr>";
+                string dados = dr[0].ToString();
+                dados = Server.HtmlEncode(dados);
+                posts += "<div>" + dados + "</div></hr>";
+                dados = Server.HtmlDecode (dados);
+                posts += "<div>" + dados + "</div></hr>";
             }
 
         }
 
-
-
         dr.Close();
         sqlConn1.Close();
-
         
         postsList.InnerHtml = posts;
-
     }
 
     private void insertPost(string newPost)

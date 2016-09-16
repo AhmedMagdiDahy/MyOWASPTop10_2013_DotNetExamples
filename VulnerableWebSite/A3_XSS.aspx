@@ -1,6 +1,6 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true"
     MasterPageFile="~/MasterPage.master"
-    CodeFile="A3_XSS.aspx.cs" Inherits="A3_XSS" ValidateRequest="true" %>
+    CodeFile="A3_XSS.aspx.cs" Inherits="A3_XSS" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
     <title>OWASP A3 - XSS Cross Site Scripting</title>
@@ -11,6 +11,7 @@
             OWASP A3 - XSS Cross Site Scripting
         </div>
         <div class="h3">
+
             O XSS está relacionado com a execução de javascript maligno num cliente<br />
             devido a vulnerabilidade que foi aproveitada numa aplicação de servidor<br />
             que não valida ou limpa (sanitize) os dados de entrada!<br />
@@ -22,14 +23,11 @@
             Deve-se Utilizar WHITE LISTs e não black list na validação dos dados de entrada!<br />
             utilizar AntiXSS lib .net (limpar os dados de entrada! e de saída...Input and Output encoding!)
 
-
-
         </div>
         <hr />
         <div style="margin: 25px" class="h1">Forum muito Vulnerável!!</div>
         <div id="postsList" runat="server"></div>
         <div style="margin-top: 1%;">
-
 
             <asp:TextBox ID="TextBox1_NewPost" runat="server" TextMode="MultiLine" Width="300px" Height="50px"></asp:TextBox>
 
