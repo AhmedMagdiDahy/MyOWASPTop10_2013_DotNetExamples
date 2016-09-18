@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WebForm2.aspx.cs" Inherits="A0_ValidationBasics.WebForm2" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Validar2.aspx.cs" Inherits="A0_ValidationBasics.Validar2" %>
 
 <!DOCTYPE html>
 
@@ -12,7 +12,6 @@
     <div>
         <span>nome de utilizador:</span>
         <asp:TextBox ID="txtName" runat="server"></asp:TextBox>
-                   
       
         <span id="resultSpan1" style="color:red"></span>
     </div>
@@ -20,6 +19,8 @@
         <div>
             <span>palavra passe:</span>
             <input id="txtPass" type="text" name="pass" runat="server" />
+             <asp:RequiredFieldValidator ControlToValidate="txtPass" EnableClientScript="true"  ID="RequiredFieldValidator1" runat="server" ErrorMessage="*campo obrigatório!"></asp:RequiredFieldValidator>
+
         </div>
 
         <div>
@@ -27,8 +28,7 @@
 
     <p>
         <asp:Button ID="Button1" runat="server" Text="Submit" /></p>
-        <asp:RequiredFieldValidator ControlToValidate="txtName" EnableClientScript="true"  ID="RequiredFieldValidator1" runat="server" ErrorMessage="*campo obrigatório!"></asp:RequiredFieldValidator>
-
+       
         </form>
     </body>
 </html>

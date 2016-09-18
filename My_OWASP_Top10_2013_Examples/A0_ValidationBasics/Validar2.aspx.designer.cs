@@ -10,7 +10,7 @@
 namespace A0_ValidationBasics {
     
     
-    public partial class WebForm2 {
+    public partial class Validar2 {
         
         /// <summary>
         /// form1 control.
@@ -40,15 +40,6 @@ namespace A0_ValidationBasics {
         protected global::System.Web.UI.HtmlControls.HtmlInputText txtPass;
         
         /// <summary>
-        /// Button1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button1;
-        
-        /// <summary>
         /// RequiredFieldValidator1 control.
         /// </summary>
         /// <remarks>
@@ -56,5 +47,14 @@ namespace A0_ValidationBasics {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator1;
+        
+        /// <summary>
+        /// Button1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Button1;
     }
 }
