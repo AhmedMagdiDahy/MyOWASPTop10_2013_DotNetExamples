@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Default.aspx.cs" Inherits="_Default" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Calendar.aspx.cs" Inherits="Calendar" %>
 
 <!DOCTYPE html>
 
@@ -15,13 +15,17 @@
 </head>
 <body>
     <form id="form1" runat="server" class="text-center">
-        <div class="h1">
-            Este calendário não permite a escolha de datas anteriores a data de hoje e a data de hoje após as 10 horas AM!
+        <div style="margin-top:25px">
+            <%=System.DateTime.Now.ToShortDateString()%> -  <%=System.DateTime.Now.ToShortTimeString()%>
+        </div>
+        <div class="h1" style="margin-top:25px">
+            Este calendário não permite a escolha de datas anteriores a data de hoje.
+            Também não pode escolher a data de hoje após as 10 horas AM!
             
         </div>
         <br />
         <div>
-            Tampering; Repudiation; Elevation of privilege
+            Tampering; Repudiation; Elevation of privilege.
         </div>
         <hr />
     <div style="vertical-align:middle">

@@ -1,18 +1,27 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
+//using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Drawing;
 
-public partial class _Default : System.Web.UI.Page
+public partial class Calendar : System.Web.UI.Page
 {
     private const int valideTimeInHoursToScheduleMeal = 10;
+    private Boolean validarDataCalendario;
 
     protected void Page_Load(object sender, EventArgs e)
     {
-
+        validarDataCalendario = true;
+        if (Request.QueryString["validar"] != null)
+        {
+            validarDataCalendario = true;
+        }
+        else
+        {
+            validarDataCalendario = false;
+        }
 
     }
 
@@ -63,14 +72,14 @@ public partial class _Default : System.Web.UI.Page
 
         //bool isValidTimeOfDayToScheduleMeal = (sameDay && DateTime.Now > maxDateHourToSchedule )  || renderedDate.Date < maxDateHourToSchedule.Date ;
 
-        if (isInValidTimeOfDayToScheduleMeal(e.Day.Date ))
+        if (isInValidTimeOfDayToScheduleMeal(e.Day.Date))
         {
             e.Day.IsSelectable = false;
-            e.Cell.ForeColor = System.Drawing.Color.Red;       
+            e.Cell.ForeColor = System.Drawing.Color.Red;
         }
 
         //if (sameDay) // refactoring the previous code to a new method removed access to this computed value...
-        if (e.Day.Date == DateTime.Now.Date )
+        if (e.Day.Date == DateTime.Now.Date)
         {
             e.Cell.BackColor = Color.Cyan;
         }
@@ -95,16 +104,21 @@ public partial class _Default : System.Web.UI.Page
     {
         string dataEscolhida = Calendar1.SelectedDate.ToShortDateString();
         string scriptInfo = "";
+
         //VERIFICAR NOVAMENTE A VALIDADE DA DATA!!
-        if (!isInValidTimeOfDayToScheduleMeal(Calendar1.SelectedDate)){
-
-            scriptInfo = "alert('" + "ok para dia: " + dataEscolhida + "');";
-        }
-
-        else{
+        if (validarDataCalendario && isInValidTimeOfDayToScheduleMeal(Calendar1.SelectedDate))
+        {
 
             scriptInfo = "alert('" + "Não pode selecionar a data: " + dataEscolhida + "');";
         }
+
+        else
+        {
+
+            scriptInfo = "alert('" + "ok para dia: " + dataEscolhida + "');";
+
+        }
+
         ClientScript.RegisterStartupScript(this.GetType(), "infoOK", scriptInfo, true);
     }
 }
