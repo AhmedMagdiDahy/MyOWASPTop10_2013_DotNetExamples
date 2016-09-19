@@ -12,15 +12,17 @@ namespace fullXSS
 
         protected void Application_Start(object sender, EventArgs e)
         {
-            if (Application["dados"] == null)
-            {
-                Application["dados"] = new List<String>() { "Bemvindos ao fórum!", "Escreva o que lhe vai na alma!" };
-            }
+            
         }
 
         protected void Session_Start(object sender, EventArgs e)
         {
-           
+            if (Session["dados"] == null)
+            {
+                Session["dados"] = new List<String>() {
+                    "Bemvindos ao fórum!", "Escreva o que lhe vai na alma!" };
+            }
+
         }
 
         protected void Application_BeginRequest(object sender, EventArgs e)

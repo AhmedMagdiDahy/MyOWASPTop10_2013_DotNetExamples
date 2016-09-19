@@ -13,13 +13,13 @@ namespace fullXSS
         List<string> forum;
         protected void Page_Load(object sender, EventArgs e)
         {
-            forum = ((List<String>) Application["dados"]);
+            forum = ((List<String>) Session["dados"]);
 
             if (Request.QueryString["data"] != null)
             {
                 Response.Clear();
                 Response.AppendHeader("Expires", "-1");//special note (not a comment!) - i.e. fetch subsequent xmlhttrequest from cache... :) dummy?!?!
-                Response.Write(buildForum((List<string>)Application["dados"]));
+                Response.Write(buildForum(forum));
 
                 Response.End();
                 return;
