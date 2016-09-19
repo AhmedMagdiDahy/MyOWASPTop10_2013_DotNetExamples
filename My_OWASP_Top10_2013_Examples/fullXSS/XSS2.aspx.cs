@@ -18,7 +18,7 @@ namespace fullXSS
             if (Request.QueryString["data"] != null)
             {
                 Response.Clear();
-                Response.AppendHeader("Expires", "-1");
+                Response.AppendHeader("Expires", "-1");//special note (not a comment!) - i.e. fetch subsequent xmlhttrequest from cache... :) dummy?!?!
                 Response.Write(buildForum((List<string>)Application["dados"]));
 
                 Response.End();

@@ -12,6 +12,8 @@ function loadData(url, outputElement) {
         if (this.readyState == 4 && this.status == 200) {
            
             document.getElementById(outputElement).innerHTML = this.responseText;
+            //document.getElementById(outputElement).innerHTML = "<br/>";
+            //document.getElementById(outputElement).innerText = this.responseText;
         }
     };
     xhttp.open("GET", url, true);
