@@ -9,7 +9,6 @@
     <script>
 
         function getData() {
-            //alert("onload done!");
             loadData("xss2.aspx?data=1", "spanResult");
         }
     </script>
@@ -46,7 +45,5 @@
     </form>
 </body>
 <script>
-
-    //  spanResult.innerHTML = '<img src="dummy" onerror="alert(\'XSS!!\');"/>';
 </script>
 </html>
