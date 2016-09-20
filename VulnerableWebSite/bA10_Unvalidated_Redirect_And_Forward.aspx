@@ -20,6 +20,11 @@
         um utilizador pode tamper with the info e aceder a outra localização que não está protegida do lado do servidor....
 
         </div>
+
+        <div style="margin-top:20px">
+           <a href="?newUrl=http://www.sapo.pt">SAPO</a>
+            <a href="?newUrl=http://www.rtp.pt">RTP</a>
+        </div>
     </form>
 </asp:Content>
 
