@@ -9,19 +9,25 @@ public partial class A2_BrokenAuth_SessionMgnt : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        //if (!Page.IsPostBack)
-        //    Session["test"] = "inicio";
-       // HttpCookie oneCookie = new HttpCookie("cookie1", "value1");
+       
+        if (!Page.IsPostBack)
+        {
+ HttpCookie oneCookie = new HttpCookie("cookie1", "value1");
+            Response.SetCookie(oneCookie);
+
+            oneCookie.HttpOnly = false;
+        }
+       
+        
         //oneCookie.Expires = new DateTime(DateTime.Now.AddMinutes(15).Ticks);
-        //Response.SetCookie(oneCookie);
+       
         //getInfoSoParaEsteUtilizador();
 
         if (Session["UserLoggedIn"] != null)
         {
             div_login.Visible = false;
             div_infoUser.Visible = true;
-           
-            
+          
         }
     }
 
@@ -50,7 +56,23 @@ public partial class A2_BrokenAuth_SessionMgnt : System.Web.UI.Page
            Session["UserLoggedIn"] = 1;
            div_login.Visible = false;
            div_infoUser.Visible = true;
-       }
+            Button1_Logout.Visible = true;
+            TextBox1_pass.Text = "";//WHY?? :)
+        }
+
+       else
+        {
+
+            Label1_InfoLogin.Text = "login errado";
+        }
 
      }
+
+    protected void Button1_Logout_Click(object sender, EventArgs e)
+    {
+        //Session.Clear();
+        Session.Abandon();
+        Button1_Logout.Visible = false;
+        div_login.Visible = true;
+    }
 }

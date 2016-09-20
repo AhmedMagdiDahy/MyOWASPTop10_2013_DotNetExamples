@@ -19,8 +19,10 @@
             Login simples para simular sessão:
             <asp:TextBox ID="TextBox1_pass" runat="server"></asp:TextBox>
             <asp:Button ID="Button1_login" runat="server" Text="Login" OnClick="Button1_login_Click" />
+            <asp:Label ID="Label1_InfoLogin" runat="server" ForeColor="red"></asp:Label>
             <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="RequiredFieldValidator" ControlToValidate="TextBox1_pass"></asp:RequiredFieldValidator>
         </div>
+        <asp:Button ID="Button1_Logout" runat="server" Text="Logout" OnClick="Button1_Logout_Click" Visible="False"/>
         <div id="div_infoUser" runat="server" visible="false">
             <div>Este risco/vulnerabilidade pode requerer eng. social. O ataquante aproveita uma falha no site por exemplo XSS para roubar o ID da sessão ou utiliza o referer no caso de ser uma sessão sem cookies...</div>
 

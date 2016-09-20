@@ -12,8 +12,6 @@ public partial class A2_BrokenAuth_SessionMgnt : System.Web.UI.Page
 
         div_info.InnerHtml = Request.UrlReferrer.ToString();
 
-
-      
     }
 
    

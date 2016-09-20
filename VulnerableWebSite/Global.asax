@@ -57,5 +57,19 @@
     "Funcao/{param1}",
     "~/A7_Missing_FunctionLevel_AccessControl.aspx");
     }
-       
+
+    void Application_EndRequest(Object sender, EventArgs e)
+    {
+        //if (Response.Cookies.Count > 0)
+        //{
+        //    foreach (string s in Response.Cookies.AllKeys)
+        //    {
+        //        if (s == "ASP.NET_SessionId")
+        //        {
+        //            Response.Cookies["ASP.NET_SessionId"].HttpOnly = false;
+        //        }
+        //    }
+        //}    
+    }
+
 </script>
