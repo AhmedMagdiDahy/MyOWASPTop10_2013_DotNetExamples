@@ -20,7 +20,7 @@
         </div>
 
         <div id="todos">
-            <asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButton1_forAllusers_Click">For Everyone</asp:LinkButton>
+            <asp:LinkButton ID="LinkButton" runat="server" OnClick="LinkButton1_forAllusers_Click">For Everyone</asp:LinkButton>
         </div>
 
         <div id="admins" runat="server" style="visibility:visible">
